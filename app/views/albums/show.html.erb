@@ -1,0 +1,17 @@
+<h2> <%= @album.name %> by <%= @album.band.name %> </h2>
+
+<table>
+  <tr>
+    <th>Tracks</th>
+  </tr>
+
+  <% @album.tracks.each do |track| %>
+    <tr>
+      <td> <%= track.name %> </td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to @album.band.name , band_url %>
+</p>

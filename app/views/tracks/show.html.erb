@@ -1,0 +1,16 @@
+<h2> <%= @track.name %> </h2>
+
+<h4>Album: <%= @track.album.name %> </h4>
+<h4>Lyrics: </h4>
+<textarea name="lyrics" rows="8" cols="40"><%= @track.lyrics %></textarea>
+
+
+<h4>Notes</h4>
+<textarea name="notes" rows="8" cols="40">"<%= render "notes/form" %>"</textarea>
+<br>
+<br>
+
+<%= link_to "Edit track", edit_track_url %>
+<br>
+
+<%= link_to "Back to Album", album_url %>

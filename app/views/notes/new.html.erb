@@ -1,0 +1,17 @@
+<h2>Add a note</h2>
+
+<form action="/notes" method="post">
+  <label for="note[track_id]">Track Name</label>
+  <select name="note[track_id]">
+    <% Track.all.each do |track| %>
+    <option value= "<%= track.id %>"><%= track.name %></option>
+    <% end %>
+  </select>
+  <br><br>
+
+  <label for="note[review]">What do you think about this song?</label><br>
+  <textarea name="note[review]" rows="8" cols="40"></textarea>
+  <br><br>
+
+  <input type="submit" name="submit" value="Submit">
+</form>
